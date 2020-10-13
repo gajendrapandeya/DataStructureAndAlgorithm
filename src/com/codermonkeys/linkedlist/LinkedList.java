@@ -120,4 +120,50 @@ public class LinkedList {
         }
         return array;
     }
+
+    //TODO:Program to reverse a Singly Linked List
+    //Input: [10 -> 20 -> 30]
+    //OutPut:[30 -> 20 -> 10]
+    public void reverse() {
+
+        if(isEmpty()) return;
+
+        var previous = first;
+        var current = first.next;
+        while (current != null) {
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = previous;
+    }
+
+    //TODO:Program to find Kth Node from the end in one pass
+    //Input: [10 -> 20 -> 30 -> 40 -> 50]
+    //OutPut: if k = 1, 50
+    //        if k = 2, 40 ....
+    public int getKthNodeFromTheEnd(int k) {
+
+        if(isEmpty())
+            throw new IllegalArgumentException();
+
+        var a = first;
+        var b = first;
+        for (int i = 0; i < k - 1; i++) {
+            b = b.next;
+            if (b == null)
+                throw new IllegalArgumentException();
+        }
+
+        while (b != last) {
+            a = a.next;
+            b = b.next;
+        }
+
+        return a.value;
+    }
 }

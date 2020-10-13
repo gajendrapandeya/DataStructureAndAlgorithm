@@ -4,7 +4,7 @@ class LinkedList {
 
     inner class Node(val value: Int) {
         lateinit var next: Node
-        constructor(no)
+//        constructor(no)
     }
 
     lateinit var first: Node
@@ -12,6 +12,6 @@ class LinkedList {
 
     fun addLast(item: Int) {
 
-        val node = Node(item)
+       // val node = Node(item)
     }
 }
