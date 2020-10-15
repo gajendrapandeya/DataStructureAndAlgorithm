@@ -4,6 +4,7 @@ import com.codermonkeys.arrays.Array;
 
 import java.util.Arrays;
 
+//Todo: Custom Stack Implementation
 public class Stack {
     private int[] items = new int[5];
     private int count;

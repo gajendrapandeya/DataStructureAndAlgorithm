@@ -4,6 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
+//Todo: Program to check if a given string is balanced or not
+// Input: "( a + b ) => output : true
+// Input: "( a + b   => output : false
+// Input: "( a + b (  => output : false
+// Input: ") a + b (   => output : false
+// Input: "( a + b }   => output : false
+// Input: "( { a + b ) }   => output : false ...........
 public class Expression {
 
     private final List<Character> leftBrackets = Arrays.asList('(', '<', '{', '[');
